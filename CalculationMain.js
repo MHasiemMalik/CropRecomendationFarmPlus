@@ -2346,7 +2346,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/groundnut2.jpg"; // New image path
    txt4.textContent = "Groundnut";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -3360,7 +3360,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/mango5.jpg"; // New image path
    txt4.textContent = "Mango";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -3698,7 +3698,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/mango5.jpg"; // New image path
    txt4.textContent = "Mango";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -3877,7 +3877,7 @@ else if(SD === "Gujarat"){
     img5.src = "TP CP PICS/wheat.jpg"; // New image path
     txt5.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/Sorghum.jpg"; // New image path
+    img6.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt6.textContent = "Sorghum";
  
    img5.src = "TP CP PICS/AERACANUT.jpg"; // New image path
@@ -4712,7 +4712,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/mango5.jpg"; // New image path
    txt4.textContent = "Mango";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/fwdvegetables/tomato1.jpg"; // New image path
@@ -5050,7 +5050,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/pineapple.jpg"; // New image path
    txt4.textContent = "Pineapple";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -5388,7 +5388,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/pineapple.jpg"; // New image path
    txt4.textContent = "Pineapple";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -5721,7 +5721,7 @@ else if(SD === "Gujarat"){
  
  }else if( Soil == -3){  //RED SOIL 
   if(SS==152){
-   img3.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img3.src = "TP CP PICS/sorghum.jpg"; // New image path
    txt3.textContent = "Sorghum";
    
    img4.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -6067,7 +6067,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/pine.jpg"; // New image path
    txt4.textContent = "Pineapple";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -6405,7 +6405,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/mango5.jpg"; // New image path
    txt4.textContent = "Mango";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -8771,7 +8771,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/maize.jpg"; // New image path
    txt4.textContent = "Maize";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -9109,7 +9109,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/maize.jpg"; // New image path
    txt4.textContent = "Maize";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -9448,7 +9448,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/pine.jpg"; // New image path
    txt4.textContent = "Pineapple";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -9786,7 +9786,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/pine.jpg"; // New image path
    txt4.textContent = "Pineapple";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
@@ -10124,7 +10124,7 @@ else if(SD === "Gujarat"){
    img4.src = "TP CP PICS/maize.jpg"; // New image path
    txt4.textContent = "Maize";
  
-   img5.src = "TP CP PICS/Sorghum.jpg"; // New image path
+   img5.src = "TP CP PICS/sorghum.jpg"; // New image path
     txt5.textContent = "Sorghum";
     
     img6.src = "TP CP PICS/Tomato.jpg"; // New image path
