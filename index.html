@@ -1,0 +1,1222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--meta name="viewport" content="width=device-width, initial-scale=0.1"-->
+    <title>Crop Recommendation+</title>
+    <script src="https://kit.fontawesome.com/f25cce70b4.js" crossorigin="anonymous"></script> 
+    <script src="CalculationMain.js"></script>
+    <style>
+        h2,h4,h3 {         
+            color:white;
+        }
+        #MAIN {
+            display: flex;
+            float: none;
+            gap: 30px;
+            flex-direction:row; 
+            justify-content:center; 
+            flex-wrap:wrap;
+            /* color: purple; */
+        }
+        #ma {
+            display: flex;
+            float: none;
+            gap: 30px;
+            flex-direction:row; 
+            justify-content:center; 
+            flex-wrap:wrap;
+            /* color: purple; */
+        }
+        body{
+	        background-image: url(saf30.jpg)
+        }
+        label{
+            color:black;
+        }
+        #Y,#X{
+            border: 1px solid green;
+            box-sizing: content-box;
+            margin: auto;
+            border-radius: 19px;
+            width: 400px;
+            padding: 32px 11px 5px;
+            background-color: orange;
+            box-shadow: 0 0 5px green,0 0 25px green;
+        }
+        #Y{
+            padding: 0px 0px 0px;
+        }
+        #X:hover{
+            box-shadow: 0 0 5px green,
+                        0 0 25px green,
+                        0 0 50px green,
+                        0 0 100px green;
+                        
+        }
+        #Y:hover{
+            box-shadow: 0 0 5px green,
+                        0 0 25px green,
+                        0 0 50px green,
+                        0 0 100px green;
+        
+        }
+        #imgdiv:hover,#imgdiv1:hover,#imgdiv2:hover,#imgdiv3:hover{
+            box-shadow: 0 0 5px green,
+                        0 0 25px green,
+                        0 0 50px green,
+                        0 0 100px green;
+        }
+        #su:hover{
+            box-shadow: 0 0 5px black,
+                        0 0 10px black;     
+        }
+        
+           #MAIN{
+                 
+                 padding-top: 0px ;
+			}
+
+
+            #pics,#soilpics,#Statepics,#Seapics{
+               height: 200px;
+               width: 300px;
+           }
+
+           #imgdiv,#imgdiv1,#imgdiv2,#imgdiv3{
+               display: none;
+               border: 3px solid orange;;
+               height: 200px;
+               width: 300px;
+               margin-top: 5%;
+           }
+           
+           .imgtxt{
+            font-size: 25px;
+            display: none;
+            color: white;
+           }
+            
+        @media screen and (max-width: 450px){
+            #X,#Y{
+                 width:245px;
+                 padding: 25px 17px 5px; 
+			}
+            #Y{
+                width:250px; 
+            }
+		}
+
+        @media (max-width: 460px) {
+            #pics,#soilpics,#Statepics,#Seapics{
+               height: 200px;
+               width: 250px;
+           }
+           #imgdiv,#imgdiv1,#imgdiv2,#imgdiv3{
+               height: 200px;
+               width: 250px;
+           }
+           .imgs{
+             width:115px;
+             height:115px;
+           }
+       }
+
+       option {
+        font-size: 15px; /* Change the font size as needed */
+    }
+
+    #sc1{
+        display: none;
+    }
+
+    #Images{
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; max-width: 300px; text-align: center; 
+    }
+    .imgs{
+        opacity: 0.4;
+    }
+
+    select,.inpdt {
+            font-size: 14px;
+            padding: 4px;
+        }#google_translate_element_container {
+            position: fixed;
+            bottom: 30px;
+            right: 10px;
+            z-index: 9999;
+            transition: box-shadow 0.3s ease; /* Add transition for a smoother effect */
+        }
+
+        /* Style the Google Translate Element */
+        #google_translate_element {
+            border: 1px solid rgba(255, 174, 0); /* Cyan border color */
+            padding: 10px;
+            background-color: #f0f8ff; /* AliceBlue background color */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 174, 0); /* Initial box-shadow */
+        }
+
+        /* Add box-shadow when hovering over the container */
+        #google_translate_element_container:hover {
+            box-shadow: 0 0 5px rgb(255, 174, 0),
+                        0 0 25px rgb(255, 174, 0),
+                        0 0 50px rgb(255, 174, 0);
+        }
+        @media (max-width: 460px) {
+            #imgX{
+                height: 200px;
+                width: 300px;
+            }
+            
+        }
+
+        h3,#hds{
+            color: black;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.3em;
+        }
+
+        #T {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        #T > div {
+            flex: 1;
+            color: white;
+            min-width: 300px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.67);
+        }
+        #subdiv {
+                display: flex;
+            }
+        
+        @media (max-width: 768px) {
+            #T {
+                display: block;
+            }
+        }
+
+        @media (max-width: 358px) {
+            #subdiv {
+                display: block;
+            }
+            #T > div {
+                min-width: 200px;
+            }
+            #ma {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({ pageLanguage: 'tel', layout: google.translate.TranslateElement.InlineLayout }, 'google_translate_element');
+      }
+    </script>
+</head>
+
+<body bgcolor="black"   style='background-repeat:no-repeat;background-position:center center; background-size:cover;  background-attachment:fixed;'>
+    <div id="google_translate_element_container">
+        <div id="google_translate_element"></div>
+    </div>
+
+    <!--img id="img0" class="imgs" src="StateImg/ANDHRA PRADESH.png" width="130px" height="130px"-->
+                        
+    
+    <CENTER> 
+
+
+
+        <CENTER>
+            <div id="ma">
+                
+                   <div>
+                    <div id="imgdiv2">
+                      
+                      <img src="" alt="" id="Statepics">
+                    </div>
+                    <h3 id="soil4" class="imgtxt">ANDHRA PRADESH</h3>
+                  </div>
+                  <div>  
+                    <div id="imgdiv">
+                      
+                      <img src="" alt="" id="pics">
+                    </div>
+                    <h3 id="croph3" class="imgtxt">Apple</h3>
+                </div>
+                <div>                
+                    <div id="imgdiv3">
+                      
+                      <img src="" alt="" id="Seapics">
+                    </div>
+                    <h3 id="soil5" class="imgtxt">Kharif (June to November)</h3>
+                </div>
+                <div> 
+                
+                    <div id="imgdiv1">
+                      
+                      <img src="" alt="" id="soilpics">
+                    </div>
+                    <h3 id="soil3" class="imgtxt">Black Soil</h3>
+                </div>
+            </div>        
+        </CENTER>
+
+        
+            
+    <div id="MAIN">   
+        <div ID="d"> 
+        <h2><i class="fa-solid fa-hand-holding-droplet"></i> Crop Recommendation :</h2>
+        <div id="X">
+            <label for="country">State Name :</label>
+            <select id="Statedata" required onchange="displaySelectedStateImage()">
+                <option value="none">NONE</option>
+                <!-- States -->
+                <option value="Andhra Pradesh">ANDHRA PRADESH</option>
+                <option value="Arunachal Pradesh">ARUNACHAL PRADESH</option>
+                <option value="Assam">ASSAM</option>
+                <option value="Bihar">BIHAR</option>
+                <option value="Chhattisgarh">CHHATTISGARH</option>
+                <option value="Goa">GOA</option>
+                <option value="Gujarat">GUJARAT</option>
+                <option value="Haryana">HARYANA</option>
+                <option value="Himachal Pradesh">HIMACHAL PRADESH</option>
+                <option value="Jharkhand">JHARKHAND</option>
+                <option value="Karnataka">KARNATAKA</option>
+                <option value="Kerala">KERALA</option>
+                <option value="Madhya Pradesh">MADHYA PRADESH</option>
+                <option value="Maharashtra">MAHARASHTRA</option>
+                <option value="Manipur">MANIPUR</option>
+                <option value="Meghalaya">MEGHALAYA</option>
+                <option value="Mizoram">MIZORAM</option>
+                <option value="Nagaland">NAGALAND</option>
+                <option value="Odisha">ODISHA</option>
+                <option value="Punjab">PUNJAB</option>
+                <option value="Rajasthan">RAJASTHAN</option>
+                <option value="Sikkim">SIKKIM</option>
+                <option value="Tamil Nadu">TAMIL NADU</option>
+                <option value="Telangana">TELANGANA</option>
+                <option value="Tripura">TRIPURA</option>
+                <option value="Uttar Pradesh">UTTAR PRADESH</option>
+                <option value="Uttarakhand">UTTARAKHAND</option>
+                <option value="West Bengal">WEST BENGAL</option>
+                <!-- Union Territories -->
+                <option value="Andaman and Nicobar Islands">ANDAMAN  ISLANDS</option>
+                <option value="Chandigarh">CHANDIGARH</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">DADRA NAGAR HAVELI DIU</option>
+                <option value="Delhi">DELHI</option>
+                <option value="Jammu and Kashmir">JAMMU AND KASHMIR</option>
+                <option value="Ladakh">LADAKH</option>
+                <option value="Lakshadweep">LAKSHADWEEP</option>
+                <option value="Puducherry">PUDUCHERRY</option>
+
+            </select><br><br>
+            <label for="country">Crop Name :</label>
+            <select id="Curcropdata" required onchange="displaySelectedImage()">
+                <option value="none">NONE</option>
+                <option value="152">AERACANUT</option>
+                <option value="107">AJWAIN SEEDS</option>
+                <option value="161">ALOEVERA</option>
+                <option value="47">APPLE</option>
+            
+                <option value="5">BANANA</option>
+                <option value="167">BARLEY</option>
+               
+                <option value="124">BEANS</option>
+                <option value="120">BEETROOT</option>
+                <option value="127">BITTER GOURD</option>
+                <option value="140">BROCCOLI</option>
+                <option value="142">BRINJAL</option>
+
+                <option value="135">CABBAGE</option>
+                <option value="128">CAPSICUM</option>
+                <option value="133">CARROT</option>
+                <option value="134">CAULIFLOWER</option>
+                <option value="147">COFFEE</option>
+                <option value="139">CORN</option>
+                <option value="144">COTTON</option>
+                <option value="121">CUCUMBER</option>
+
+                <option value="131">GARLIC</option>
+                <option value="61">GRAPES</option>
+                <option value="170">GROUNDNUT</option>
+
+                <option value="143">LADIES FINGER (OKRA)</option>
+                
+                <option value="67">MANGO</option>
+
+                <option value="132">ONION</option>
+
+                <option value="83">PEPPER</option>
+                <option value="18">POTATO</option>
+                <option value="77">POMEGRANATE</option>
+                <option value="119">PUMPKIN</option>
+
+
+                <option value="123">RADISH</option>
+                <option value="168">RICE</option>
+                <option value="12">ROSE</option>
+            
+                <option value="145">SUGARCANE</option>
+                <option value="151">SUNFLOWER</option>
+                <option value="125">SWEET POTATO</option>
+
+                <option value="146">TEA</option>
+                <option value="50">TOMATO</option>        
+                <option value="141">TURNIP</option>
+
+                <option value="82">WATERMELON</option>
+                <option value="169">WHEAT</option>
+
+            </select><br><br>
+            <label>Season:</label>
+             <select id="CurSeason" required onchange="displaySelectedSeasonImage()">
+                <option value="none">NONE</option>
+                <option value="152">Kharif (June to November)</option>
+                <option value="107">Rabi (November to March)</option>
+                <option value="161">Zaid (March to June)</option>
+             </select> <br><br> 
+             <label >Soil Type :</label>
+            <select id="Soildata" required onchange="displaySelectedSoilImage()">
+                <option value="none">NONE</option>
+                <option value="-6">ARID, DESERT SOIL</option>
+                <option value="-1">ALLUVIAL SOIL</option>
+                <option value="-2">BLACK SOIL</option>
+                <option value="-8">FOREST SOIL</option>
+                <option value="-4">LATERITE SOIL</option>
+                <option value="-5">MOUNTAIN SOIL</option>
+                <option value="-3">RED SOIL</option>
+                <option value="-7">YELLOW SOIL</option>
+            </select>
+            <p>
+                <center><input type="image" id="su" src="SUBMITB.jpg" alt="Submit" width="90" height="32" onclick="calculate()"></center>
+            </p>
+        </div>
+       </div>
+
+       <div id="F">
+        <h2><i id="sc"  class="fa-solid fa-scale-balanced"></i> <i id="sc1" class="fa-solid fa-scale-balanced fa-shake"></i>Crops Suggestions:</h2>
+            <div id="Y">
+                <h3 id="hds"> ~~~~ For Soil Fertility ~~~~</h3>
+                <div id="Images">   
+                    <div>
+                        <img id="img1" class="imgs" src="Farmp.jpeg" width="130px" height="130px">
+                        <h3 id="txt1">Enter Data</h3>
+                    </div>
+                    <div>
+                        <img id="img2" class="imgs" src="Farmp.jpeg" width="130px" height="130px">
+                        <h3 id="txt2">Enter Data</h3>
+                    </div>
+                </div>
+                <h3 id="hds"> ~~~~ For Current Season ~~~~ </h3>
+                <div id="Images">     
+                    <div>
+                        <img id="img3" class="imgs" src="Farmp.jpeg" width="130px" height="130px">
+                        <h3 id="txt3">Enter Data</h3>
+                    </div>
+                    <div>
+                        <img id="img4" class="imgs" src="Farmp.jpeg" width="130px" height="130px">
+                        <h3 id="txt4">Enter Data</h3>
+                    </div>
+                </div>
+                <h3 id="hds"> ~~~~ For Market Value ~~~~</h3>
+                <div id="Images">
+                    <div>
+                        <img id="img5" class="imgs" src="Farmp.jpeg" width="130px" height="130px">
+                        <h3 id="txt5">Enter Data</h3>
+                    </div>
+                    <div>
+                        <img id="img6" class="imgs" src="Farmp.jpeg" width="130px" height="130px">
+                        <h3 id="txt6">Enter Data</h3>
+                    </div>
+                </div>                  
+                <p>
+                <center><input type="image" id="su" src="RESETB.jpg" alt="reset" width="90" height="32" onclick="reset()"></center>
+                </p>
+            </div>
+       </div>
+    </div></center><br><br><br>
+    
+<!--center><h4 style="background-color: rgba(0, 0, 0, 0.49);width: 60%;">NOTE:<br><i class="fa-solid fa-right-long"></i> 1 quintal = 100kg &nbsp; || &nbsp; <i class="fa-solid fa-right-long"></i> 1kg = 1000grams/0.01 quintal <br><i class="fa-solid fa-right-long"></i> 10 quintals = 1000 kg/1 ton &nbsp;|| &nbsp; <i class="fa-solid fa-right-long"></i> 0.5 quintal = 50 kg <br><i class="fa-solid fa-right-long"></i> N:P:K= Nitrogen : Potassium : Phosphorus (Urea) <br> <br>The Above Data Is Approximation And May Slightly Differ On Seasonal Factors</h4></CENTER><br><br><br><br><br-->
+<div id="T">
+    <div>
+        <h2>Nitrogen-Depleting Crops (<span>Crops That Consume a Lot of Nitrogen and Important Minerals</span>)</h2>
+        <h5>If a farmer grows nitrogen-depleting crops (e.g., rice, wheat, corn), the soil will lose nitrogen and essential minerals rapidly. Active soil fertility restoration is necessary after such crops. This can be done through:
+            <ul>
+                <li>Crop rotation with nitrogen-fixing crops.</li>
+                <li>Applying organic matter like compost or manure.</li>
+                <li>Using synthetic nitrogen fertilizers cautiously.</li>
+                <li>Practicing cover cropping (e.g., legumes as cover crops) during the off-season.</li>
+            </ul>
+        </h5>
+        <p><i class="fab fa-pagelines"></i> 
+            1. AERACANUT<br><i class="fab fa-pagelines"></i> 
+            2. APPLE<br><i class="fab fa-pagelines"></i> 
+            3. BANANA<br><i class="fab fa-pagelines"></i> 
+            4. BARLEY<br><i class="fab fa-pagelines"></i> 
+            5. BEANS<br><i class="fab fa-pagelines"></i> 
+            6. BITTER GOURD<br><i class="fab fa-pagelines"></i> 
+            7. BOTTLE GOURD<br><i class="fab fa-pagelines"></i> 
+            8. BROCCOLI<br><i class="fab fa-pagelines"></i> 
+            9. BRINJAL<br><i class="fab fa-pagelines"></i> 
+            10. CABBAGE<br><i class="fab fa-pagelines"></i> 
+            11. CAPSICUM<br><i class="fab fa-pagelines"></i> 
+            12. CARROT<br><i class="fab fa-pagelines"></i> 
+            13. CAULIFLOWER<br><i class="fab fa-pagelines"></i> 
+            14. COFFEE<br><i class="fab fa-pagelines"></i> 
+            15. CORN<br><i class="fab fa-pagelines"></i> 
+            16. COTTON<br><i class="fab fa-pagelines"></i> 
+            17. CUCUMBER<br><i class="fab fa-pagelines"></i> 
+            18. GRAPES<br><i class="fab fa-pagelines"></i> 
+            19. GROUNDNUT<br><i class="fab fa-pagelines"></i> 
+            20. LADIES FINGER (OKRA)<br><i class="fab fa-pagelines"></i> 
+            21. MANGO<br><i class="fab fa-pagelines"></i> 
+            22. ONION<br><i class="fab fa-pagelines"></i> 
+            23. PEPPER<br><i class="fab fa-pagelines"></i> 
+            24. POTATO<br><i class="fab fa-pagelines"></i> 
+            25. RICE<br><i class="fab fa-pagelines"></i> 
+            26. SUGARCANE<br><i class="fab fa-pagelines"></i> 
+            27. SUNFLOWER<br><i class="fab fa-pagelines"></i> 
+            28. TEA<br><i class="fab fa-pagelines"></i> 
+            29. TOMATO<br><i class="fab fa-pagelines"></i> 
+            30. WHEAT<br>
+        </p>
+    </div>
+
+    <div>
+        <h2>Nitrogen-Fixing Crops (<span>Crops That Replenish and Fix Nitrogen and Other Minerals</span>)</h2>
+        <h5>Nitrogen-fixing crops actively replenish soil nitrogen, reducing or eliminating the need for restoration. However:
+            <ul>
+                <li>Over time, other nutrients (like phosphorus, potassium, or micronutrients) may get depleted, so soil fertility management might still be necessary, albeit less frequently.</li>
+            </ul>
+        </h5>
+        <p><i class="fab fa-pagelines"></i> 
+            1. ALFALFA<br><i class="fab fa-pagelines"></i> 
+            2. BEANS<br><i class="fab fa-pagelines"></i> 
+            3. BENGALGRAM<br><i class="fab fa-pagelines"></i> 
+            4. BLACK CUMIN<br><i class="fab fa-pagelines"></i> 
+            5. CHICKPEA<br><i class="fab fa-pagelines"></i> 
+            6. CLOVER<br><i class="fab fa-pagelines"></i> 
+            7. FENNUGREEK<br><i class="fab fa-pagelines"></i> 
+            8. GALANGAL<br><i class="fab fa-pagelines"></i> 
+            9. GUAR<br><i class="fab fa-pagelines"></i> 
+            10. LENTIL<br><i class="fab fa-pagelines"></i> 
+            11. LUPIN<br><i class="fab fa-pagelines"></i> 
+            12. MUNGBEAN<br><i class="fab fa-pagelines"></i> 
+            13. PEANUT<br><i class="fab fa-pagelines"></i> 
+            14. PEAS<br><i class="fab fa-pagelines"></i> 
+            15. PIGEON PEA<br><i class="fab fa-pagelines"></i> 
+            16. SOYBEAN<br><i class="fab fa-pagelines"></i> 
+            17. URADBEAN<br>
+        </p>
+    </div>
+
+    <div>
+        <h2>Crops with Neutral or Minimal Impact on Soil Nitrogen</h2>
+        <h5>These crops neither significantly deplete nor fix nitrogen; they may rely on fertilizers or organic inputs for sustained production but have a relatively balanced effect on soil nitrogen levels.</h5>
+        <div id="subdiv">
+            <p><i class="fab fa-pagelines"></i> 
+                1. AJWAIN SEEDS<br><i class="fab fa-pagelines"></i> 
+                2. ALOEVERA<br><i class="fab fa-pagelines"></i> 
+                3. ANISE SEEDS<br><i class="fab fa-pagelines"></i> 
+                4. ASAFOETIDA<br><i class="fab fa-pagelines"></i> 
+                5. AZALEA<br><i class="fab fa-pagelines"></i> 
+                6. BAY LEAF<br><i class="fab fa-pagelines"></i> 
+                7. BETEL LEAF<br><i class="fab fa-pagelines"></i> 
+                8. BLUEBELL<br><i class="fab fa-pagelines"></i> 
+                9. BOUGAINVILLEA<br><i class="fab fa-pagelines"></i> 
+                10. CARDAMOM<br><i class="fab fa-pagelines"></i> 
+                11. CASHEW<br><i class="fab fa-pagelines"></i> 
+                12. CELERY SEEDS<br><i class="fab fa-pagelines"></i> 
+                13. CINNAMON<br><i class="fab fa-pagelines"></i> 
+                14. CHERRY<br><i class="fab fa-pagelines"></i> 
+                15. CHRYSANTHEMUM<br><i class="fab fa-pagelines"></i> 
+                16. COCOA<br><i class="fab fa-pagelines"></i> 
+                17. COCONUT<br><i class="fab fa-pagelines"></i> 
+                18. CUBEB PEPPER<br><i class="fab fa-pagelines"></i> 
+                19. CURRY LEAVES<br><i class="fab fa-pagelines"></i> 
+                20. DAHLIA<br><i class="fab fa-pagelines"></i> 
+                21. DAFFODILS<br><i class="fab fa-pagelines"></i> 
+                22. DAISIES<br><i class="fab fa-pagelines"></i> 
+                23. DATES<br><i class="fab fa-pagelines"></i> 
+                24. DILL SEEDS<br><i class="fab fa-pagelines"></i> 
+                25. DRUMSTICK<br><i class="fab fa-pagelines"></i> 
+                26. FENNEL<br><i class="fab fa-pagelines"></i> 
+                27. FLAXSEEDS<br><i class="fab fa-pagelines"></i> 
+                28. GARLIC<br><i class="fab fa-pagelines"></i> 
+                29. GERANIUM<br><i class="fab fa-pagelines"></i> 
+                30. GLADIOLUS<br><i class="fab fa-pagelines"></i> 
+                31. GINGER<br><i class="fab fa-pagelines"></i> 
+                32. GUAVA<br><i class="fab fa-pagelines"></i> 
+                33. HIBISCUS<br><i class="fab fa-pagelines"></i> 
+                34. HYDRANGEA<br><i class="fab fa-pagelines"></i> 
+                35. IRIS<br><i class="fab fa-pagelines"></i> 
+                36. JACKFRUIT<br><i class="fab fa-pagelines"></i> 
+                37. JASMINE<br><i class="fab fa-pagelines"></i> 
+                38. JAMUN<br><i class="fab fa-pagelines"></i> 
+                39. JUTE<br><i class="fab fa-pagelines"></i> 
+                40. JUNIPER BERRY<br><i class="fab fa-pagelines"></i> 
+                41. KENAF<br><i class="fab fa-pagelines"></i> 
+                42. KOKUM<br><i class="fab fa-pagelines"></i> 
+                43. LAVENDER<br>
+            </p><p>  <i class="fab fa-pagelines"></i>  
+                44. LILY<br><i class="fab fa-pagelines"></i> 
+                45. LILY OF THE VALLEY<br><i class="fab fa-pagelines"></i> 
+                46. LONG PEPPER<br><i class="fab fa-pagelines"></i> 
+                47. LYCHEE<br><i class="fab fa-pagelines"></i> 
+                48. MACE<br><i class="fab fa-pagelines"></i> 
+                49. MARIGOLD<br><i class="fab fa-pagelines"></i> 
+                50. MULBERRY<br><i class="fab fa-pagelines"></i> 
+                51. MUSTARD SEEDS<br><i class="fab fa-pagelines"></i> 
+                52. NUTMEG<br><i class="fab fa-pagelines"></i> 
+                53. OLIVE<br><i class="fab fa-pagelines"></i> 
+                54. ORCHIDS<br><i class="fab fa-pagelines"></i> 
+                55. PAPAYA<br><i class="fab fa-pagelines"></i> 
+                56. PASSION FRUIT<br><i class="fab fa-pagelines"></i> 
+                57. PEACH<br> &nbsp;<i class="fab fa-pagelines"></i>
+                58. PERSIMMON<br><i class="fab fa-pagelines"></i> 
+                59. PETUNIA<br><i class="fab fa-pagelines"></i> 
+                60. PINEAPPLE<br><i class="fab fa-pagelines"></i> 
+                61. PLUM<br><i class="fab fa-pagelines"></i> 
+                62. POPPY SEEDS<br><i class="fab fa-pagelines"></i> 
+                63. RAMBUTAN<br><i class="fab fa-pagelines"></i> 
+                64. RADISH<br><i class="fab fa-pagelines"></i> 
+                65. RED CHILLI<br><i class="fab fa-pagelines"></i> 
+                66. RIDGE GOURD<br><i class="fab fa-pagelines"></i> 
+                67. ROSE<br><i class="fab fa-pagelines"></i> 
+                68. RUBBER<br><i class="fab fa-pagelines"></i> 
+                69. SAFFRON<br><i class="fab fa-pagelines"></i> 
+                70. SAPOTA<br><i class="fab fa-pagelines"></i> 
+                71. SESAME<br><i class="fab fa-pagelines"></i> 
+                72. SPINACH<br><i class="fab fa-pagelines"></i> 
+                73. STAR ANISE<br><i class="fab fa-pagelines"></i> 
+                74. STAR FRUIT<br><i class="fab fa-pagelines"></i> 
+                75. SWEET PEA<br><i class="fab fa-pagelines"></i> 
+                76. SWEET POTATO<br><i class="fab fa-pagelines"></i> 
+                77. TAMARIND<br><i class="fab fa-pagelines"></i> 
+                78. TAPIOCA<br><i class="fab fa-pagelines"></i> 
+                79. TOBACCO<br><i class="fab fa-pagelines"></i> 
+                80. TULIP<br><i class="fab fa-pagelines"></i> 
+                81. TURNIP<br><i class="fab fa-pagelines"></i> 
+                82. VANILLA<br><i class="fab fa-pagelines"></i> 
+                83. WATERMELON<br><i class="fab fa-pagelines"></i> 
+                84. WHITE PEPPER<br><i class="fab fa-pagelines"></i> 
+                85. ZINNIA<br>
+            </p>
+        </div>
+        
+    </div>
+    <p style="background-color:rgba(0, 0, 0, 0.67) ;color: white;padding: 2%;border: 1px solid #ddd;">Note:
+        If a farmer grows nitrogen-depleting crops, restoration is critical after each crop cycle.
+            If a farmer grows neutral crops, soil fertility restoration is less frequent but still necessary for long-term health.
+            If a farmer grows nitrogen-fixing crops, they naturally restore nitrogen levels, but other nutrients might need periodic supplementation.
+            Farmers can optimize soil health by combining crop rotation strategies (including nitrogen-fixing crops) and sustainable soil management practices.      
+    </p>
+</div>
+
+
+    <script>
+        function displaySelectedSoilImage() {
+            var select = document.getElementById("Soildata");
+            var image = document.getElementById("soilpics");
+            var divtag = document.getElementById("imgdiv1");
+            var h3 = document.getElementById("soil3");
+
+           // var main=document.getElementById("MAIN");
+
+            var selectedValue = select.value;
+            var imageUrls = {
+                   "-1":"TP CP PICS/alluvial soil.jpg",
+                   "-2":"TP CP PICS/black soil.jpg",
+                   "-3":"TP CP PICS/red soil.jpg",
+                   "-4":"TP CP PICS/leteraite soil.jpg",
+                   "-5":"TP CP PICS/mountain soil.jpg",
+                   "-6":"TP CP PICS/arid soil.jpg  ",
+                   "-7":"TP CP PICS/yellow soil.jpg  ",
+                   "-8":"TP CP PICS/Forest soil.jpg  "
+                };
+
+                var h3Text = {
+                   "-1":"Alluvial soil",
+                   "-2":"Black soil",
+                   "-3":"Red soil",
+                   "-4":"Leteraite soil",
+                   "-5":"Mountain soil",
+                   "-6":"Arid,Desert soil",
+                   "-7":"Yellow soil",
+                   "-8":"Forest soil"
+                };
+                image.src = imageUrls[selectedValue];
+                h3.textContent = h3Text[selectedValue];
+
+     if(selectedValue === "none") {
+        imgdiv1.style.display = "none";
+        h3.style.display = "none";
+      } else {
+        imgdiv1.style.display = "block";
+        h3.style.display = "block";
+       // main.style.display =""
+
+      }
+
+                
+                  
+       }
+
+       function displaySelectedSeasonImage() {
+            var select = document.getElementById("CurSeason");
+            var image = document.getElementById("Seapics");
+            var divtag = document.getElementById("imgdiv3");
+            var h3 = document.getElementById("soil5");
+
+           // var main=document.getElementById("MAIN");
+
+            var selectedValue = select.value;
+            var imageUrls = {
+                   "152":"StateImg/Kharif.jpg",
+                   "107":"StateImg/Rabi.jpg",
+                   "161":"StateImg/Zaid.jpg"                 
+                };
+
+                var h3Text = {
+                    "152":"KHARIF (June to November)",
+                    "107":"RABI (November to March)",
+                    "161":"ZAID (March to June)"
+                };
+                image.src = imageUrls[selectedValue];
+                h3.textContent = h3Text[selectedValue];
+
+     if(selectedValue === "none") {
+        imgdiv3.style.display = "none";
+        h3.style.display = "none";
+      } else {
+        imgdiv3.style.display = "block";
+        h3.style.display = "block";
+       // main.style.display =""
+
+      }
+    }
+
+
+    function displaySelectedStateImage() {
+            var select = document.getElementById("Statedata");
+            var image = document.getElementById("Statepics");
+            var divtag = document.getElementById("imgdiv2");
+            var h3 = document.getElementById("soil4");
+
+           // var main=document.getElementById("MAIN");
+
+            var selectedValue = select.value;
+            var imageUrls = {
+                 "Andhra Pradesh":"StateImg/ANDHRA PRADESH.png", 
+                 "Arunachal Pradesh":"StateImg/ARUNACHAL PRADESH.png", 
+                 "Assam":"StateImg/ASSAM.png", 
+                 "Bihar":"StateImg/BIHAR.png", 
+                 "Chhattisgarh":"StateImg/CHHATTISGARH.png", 
+                 "Goa":"StateImg/GOA.png", 
+                 "Gujarat":"StateImg/GUJARAT.png", 
+                 "Haryana":"StateImg/HARYANA.png", 
+                 "Himachal Pradesh":"StateImg/HIMACHAL PRADESH.png", 
+                 "Jharkhand":"StateImg/JHARKHAND.png", 
+                 "Karnataka":"StateImg/KARNATAKA.png", 
+                 "Kerala":"StateImg/KERALA.png", 
+                 "Madhya Pradesh":"StateImg/MADHYA PRADESH.jpg", 
+                 "Maharashtra":"StateImg/MAHARASHTRA.png", 
+                 "Manipur":"StateImg/MANIPUR.jpg", 
+                 "Meghalaya":"StateImg/MEGHALAYA.png", 
+                 "Mizoram":"StateImg/MIZORAM.jpg", 
+                 "Nagaland":"StateImg/NAGALAND.png", 
+                 "Odisha":"StateImg/ODISHA.jpg", 
+                 "Punjab":"StateImg/PUNJAB.jpg", 
+                 "Rajasthan":"StateImg/RAJASTHAN.jpg", 
+                 "Sikkim":"StateImg/SIKKIM.png", 
+                 "Tamil Nadu":"StateImg/TAMIL NADU.png", 
+                 "Telangana":"StateImg/TELANGANA.jpeg", 
+                 "Tripura":"StateImg/TRIPURA.png", 
+                 "Uttar Pradesh":"StateImg/UTTAR PRADESH.png", 
+                 "Uttarakhand":"StateImg/UTTARAKHAND.jpg", 
+                 "West Bengal":"StateImg/WEST BENGAL.png", 
+                
+                 "Andaman and Nicobar Islands":"StateImg/ANDAMAN _ NICOBAR.png", 
+                 "Chandigarh":"StateImg/CHANDIGARH.jpg", 
+                 "Dadra and Nagar Haveli and Daman and Diu":"StateImg/DADRA, DAMAN _ DIU.png", 
+                 "Delhi":"StateImg/DELHI.png", 
+                 "Jammu and Kashmir":"StateImg/JAMMU KASHMIR.jpg", 
+                 "Ladakh":"StateImg/LADAKH.jpg", 
+                 "Lakshadweep":"StateImg/LAKSHADWEEP.png", 
+                 "Puducherry":"StateImg/puducherry-districts.png"               
+                };
+
+                var h3Text = {
+                     "Andhra Pradesh":"ANDHRA PRADESH", 
+                 "Arunachal Pradesh":"ARUNACHAL PRADESH", 
+                 "Assam":"ASSAM", 
+                 "Bihar":"BIHAR", 
+                 "Chhattisgarh":"CHHATTISGARH", 
+                 "Goa":"GOA", 
+                 "Gujarat":"GUJARAT", 
+                 "Haryana":"HARYANA", 
+                 "Himachal Pradesh":"HIMACHAL PRADESH", 
+                 "Jharkhand":"JHARKHAND", 
+                 "Karnataka":"KARNATAKA", 
+                 "Kerala":"KERALA", 
+                 "Madhya Pradesh":"MADHYA PRADESH", 
+                 "Maharashtra":"MAHARASHTRA", 
+                 "Manipur":"MANIPUR", 
+                 "Meghalaya":"MEGHALAYA", 
+                 "Mizoram":"MIZORAM", 
+                 "Nagaland":"NAGALAND", 
+                 "Odisha":"ODISHA", 
+                 "Punjab":"PUNJAB", 
+                 "Rajasthan":"RAJASTHAN", 
+                 "Sikkim":"SIKKIM", 
+                 "Tamil Nadu":"TAMIL NADU", 
+                 "Telangana":"TELANGANA", 
+                 "Tripura":"TRIPURA", 
+                 "Uttar Pradesh":"UTTAR PRADESH", 
+                 "Uttarakhand":"UTTARAKHAND", 
+                 "West Bengal":"WEST BENGAL", 
+                
+                 "Andaman and Nicobar Islands":"ANDAMAN  ISLANDS", 
+                 "Chandigarh":"CHANDIGARH", 
+                 "Dadra and Nagar Haveli and Daman and Diu":"DADRA NAGAR HAVELI DIU", 
+                 "Delhi":"DELHI", 
+                 "Jammu and Kashmir":"JAMMU AND KASHMIR", 
+                 "Ladakh":"LADAKH", 
+                 "Lakshadweep":"LAKSHADWEEP", 
+                 "Puducherry":"PUDUCHERRY"
+                };
+                image.src = imageUrls[selectedValue];
+                h3.textContent = h3Text[selectedValue];
+
+     if(selectedValue === "none") {
+        imgdiv2.style.display = "none";
+        h3.style.display = "none";
+      } else {
+        imgdiv2.style.display = "block";
+        h3.style.display = "block";
+       // main.style.display =""
+
+      }
+    }
+
+
+
+        function displaySelectedImage() {
+        
+        var select = document.getElementById("Curcropdata");
+        
+        var image = document.getElementById("pics");
+        
+        var h3 = document.getElementById("croph3");
+        
+        var divtag = document.getElementById("imgdiv");
+        
+        
+      var selectedValue = select.value;
+      // Define an object with image URLs corresponding to each option
+      var imageUrls = {
+        //"none": "",
+                   "12":"TP CP PICS/rose1.jpg",
+                   "20":"TP CP PICS/jasmine1.jpg",
+                   "25":"TP CP PICS/marigold1.jpg",
+                    "7":"TP CP PICS/orchidstype1.jpg",
+                   "10":"TP CP PICS/lily.jpg",
+                  "51" :"TP CP PICS/CHRYSANTHEMUM1.jpg  ",
+                  "69" :"TP CP PICS/HIBISCUS crop.jpg  ",
+                  "8" :"TP CP PICS/flowergrowth/tulip2.jpg  ",
+                  "55" :"TP CP PICS/flowergrowth/Daffodils1.jpg  ",
+                  "9" :"TP CP PICS/flowergrowth/iris.jpg  ",
+                  "30" :"TP CP PICS/flowergrowth/daisies.jpg  ",
+                  "31" :"TP CP PICS/ASTER crop.jpg  ",
+                  "11" :"TP CP PICS/GLADIOLUS.jpg",
+                  "34" :"TP CP PICS/PETUNIA.jpg ",
+                  "32" :"TP CP PICS/ZINNIA.jpg  ",
+                  "33" :"TP CP PICS/flowergrowth/pansy.jpg  ",
+                  "35" :"TP CP PICS/COSMO .jpg  ",
+                  "36" :"TP CP PICS/DEHLIAS2.jpg  ",
+                  "37" :"TP CP PICS/lily of the valley2.jpg  ",
+                  "38" :"TP CP PICS/sweet pea2.jpg  ",
+                  "39" :"TP CP PICS/hydrangea.jpg  ",
+                  "40" :"TP CP PICS/BOUGAINVILLEA crops.jpg  ",
+                  "41" :"TP CP PICS/morning glory.jpg  ",
+                  "42" :"TP CP PICS/geranium.jpg  ",
+                  "43" :"TP CP PICS/lavender1.jpg  ",
+                  "44" :"TP CP PICS/bluebell2.jpg  ",
+                  "45" :"TP CP PICS/flowergrowth/Camellia.jpg",
+                  "46" :"TP CP PICS/azalea.jpg",
+                  "47" :"TP CP PICS/applebyme.jpg",
+                  "5" :"TP CP PICS/banana.jpg  ",
+                  "52" :"TP CP PICS/blueberry.jpg",
+                  "53" :"TP CP PICS/cashew.jpg  ",
+                  "54" :"TP CP PICS/cherry.jpg  ",
+                  "57" :"TP CP PICS/coconut.jpg  ",
+                  "58" :"TP CP PICS/custard.jpg  ",
+                  "59" :"TP CP PICS/datepalmfarmer.jpg  ",
+                  "61" :"TP CP PICS/grapes.jpg  ",
+                  "62" :"TP CP PICS/guava.jpg  ",
+                  "63" :"TP CP PICS/jackfruit.jpg  ",
+                  "64" :"TP CP PICS/jamun.jpg  ",
+                  "66" :"TP CP PICS/lychee10.jpg  ",
+                  "67" :"TP CP PICS/mango5.jpg  ",
+                  "68" :"TP CP PICS/mulberry.jpg  ",
+                  "70" :"TP CP PICS/olive.jpg  ",
+                  "71" :"TP CP PICS/papaya.jpg  ",
+                  "72" :"TP CP PICS/passion Fruit.jpg", 
+                  "73" :"TP CP PICS/peach110.jpg  ",
+                  "74" :"TP CP PICS/Persimmon.jpg",
+                  "75" :"TP CP PICS/pine.jpg  ",
+                  "76" :"TP CP PICS/plum110.jpg  ",
+                  "77" :"TP CP PICS/pomegranate.jpg  ",
+                  "78" :"TP CP PICS/Rambutan.jpg",
+                  "79" :"TP CP PICS/Sapota10.jpg  ",
+                  "80" :"TP CP PICS/Star fruit.jpg",
+                  /*"81" :"TP CP PICS/Tamarind.jpg  ",*/
+                  "82" :"TP CP PICS/Watermelon10.jpg",
+                  "83" :"TP CP PICS/blackpepper.jpg",
+                  "84" :"TP CP PICS/cardamom.jpg",
+                  "85" :"TP CP PICS/cinnamon.jpg",
+                  "86" :"TP CP PICS/cloves.jpg",
+                  "87" :"TP CP PICS/coriander1.jpg",
+                  "88" :"TP CP PICS/CUMIN1.jpg",
+                  "89" :"TP CP PICS/fennel1.jpg",
+                  "90" :"TP CP PICS/fen2.jpg",
+                  "91" :"TP CP PICS/gin.jpg",
+                  "92" :"TP CP PICS/nutmeg.jpg",
+                  "93" :"TP CP PICS/TURMARIC1.jpg",
+                  "94" :"TP CP PICS/star.jpg",
+                  "95" :"TP CP PICS/bay.jpg",
+                  "96" :"TP CP PICS/caromseeds1.jpg",
+                  "97" :"TP CP PICS/asafoetida1.jpg",
+                  "98" :"TP CP PICS/mustard seeds.jpg",
+                  "99" :"TP CP PICS/saf3.jpg",
+                  "100" :"TP CP PICS/tamarind2.jpg",
+                  "101" :"TP CP PICS/curryleaves1.jpg",
+                  "102" :"TP CP PICS/mace.jpg",
+                  "103" :"TP CP PICS/longpepper1.jpg",
+                  "104" :"TP CP PICS/WHITE PEPPER.jpg",
+                  "105" :"TP CP PICS/Celery.png",
+                  "106" :"TP CP PICS/poppy3.jpg",
+                  "107" :"TP CP PICS/ajwainseeds.jpg",
+                  "108" :"TP CP PICS/KL2.jpg",
+                  "109" :"TP CP PICS/dillseeds.jpg",
+                  "110" :"TP CP PICS/ani3.jpg",
+                  "111" :"TP CP PICS/caper1.jpg",
+                  "112" :"TP CP PICS/cubebpepper.jpg",
+                  "113" :"TP CP PICS/PARADISE.jpg",
+                  "114" :"TP CP PICS/juniperberry1.jpg",
+                  "115" :"TP CP PICS/kokum.jpg",
+                  "116" :"TP CP PICS/bishopsweed.jpg",
+                  "117" :"TP CP PICS/galangal1.jpg",
+                  "50" :"TP CP PICS/tomato1.jpg",
+                  "18" :"TP CP PICS/potato3.jpg",
+                  "133":"TP CP PICS/carrot3.jpg",
+                 
+                 "119":"TP CP PICS/pumpkin1.jpg",
+                 "120":"TP CP PICS/beetroot1.jpg",
+                 "121":"TP CP PICS/cucumber3.jpg",
+                 "122":"TP CP PICS/peas3.jpg",
+                 "123":"TP CP PICS/radish3.jpg",
+                 "124":"TP CP PICS/beans3.jpg",
+                 "125":"TP CP PICS/fwdvegetables/sweetpotato3.jpeg",
+                 "126":"TP CP PICS/drumstick1.jpg",
+                 "127":"TP CP PICS/bitter gourd3.jpg",
+                 "128":"TP CP PICS/fwdvegetables/capsicum1.jpg",
+                 "129":"TP CP PICS/redchilli1.png",
+                 "130":"TP CP PICS/green chilli3.jpg",
+                 "131":"TP CP PICS/garlic3.jpg",
+                 "132":"TP CP PICS/onion3.jpg",
+                 "134":"TP CP PICS/cauliflower3.jpg",
+                 "135":"TP CP PICS/cabbage3.jpg",
+                 "136":"TP CP PICS/spinach3.jpg",
+                 "137":"TP CP PICS/bottle gourd3.jpg",
+                 "138":"TP CP PICS/ridge gourd3.jpg",
+                 "139":"TP CP PICS/fwdvegetables/corn3.jpg",
+                 "140":"TP CP PICS/broccoli3.jpg",
+                 "141":"TP CP PICS/turnip1.jpg",
+                 "142":"TP CP PICS/fwdvegetables/brinjal1.jpg",
+                 "143":"TP CP PICS/fwdvegetables/ladiesfinger1.jpg",
+
+                 /*"144":"/TELANGANA/TP CP TP CP PICS/yam3.jpg",
+                 "145":"/TELANGANA/TP CP TP CP PICS/colocasia3.jpg",
+                 "146":"/TELANGANA/TP CP TP CP PICS/chayote squash1.jpg",
+                 "147":"/TELANGANA/TP CP TP CP PICS/tindora1.jpg",
+                 "147":"/TELANGANA/TP CP TP CP PICS/cluster beans3.jpg",
+                 "149":"/TELANGANA/TP CP TP CP PICS/ash gourd3.jpg",
+                 "150":"/TELANGANA/TP CP TP CP PICS/fwdvegetables/snake gourd3.jpg",*/
+                 
+                 "144":"TP CP PICS/cotton1.jpg",
+                "145":"TP CP PICS/sugercane1.jpg",
+                "146":"TP CP PICS/Tea1.jpg",
+                "147":"TP CP PICS/Coffee.png",
+                "148":"TP CP PICS/tobbaco1.jpeg",
+                "149":"TP CP PICS/jute.jpg",
+                "150":"TP CP PICS/rubber2.jpg",
+                "151":"TP CP PICS/SUNFLOWER.jpg",
+                "152":"TP CP PICS/AERACANUT.jpg",
+                "153":"TP CP PICS/vanilla.png",
+                "154":"TP CP PICS/Kenaf.jpg",
+                "155":"TP CP PICS/Flexseeds.png",
+                "156":"TP CP PICS/Tapioca.jpg",
+                "157":"TP CP PICS/cocoa.jpg",
+                "158":"TP CP PICS/betalleaf1.jpg",
+                "159":"TP CP PICS/GUAR.jpg",
+                "161":"TP CP PICS/ALOEVERA.jpg",
+                "162":"TP CP PICS/mungbeans.jpg",
+                "163":"TP CP PICS/URADBEAN.jpg",
+                "164":"TP CP PICS/bengalgram1.jpg",
+                "165":"TP CP PICS/RAGI.jpg",
+                "166":"TP CP PICS/bajra.jpg",
+                "167":"TP CP PICS/barley2.jpg",
+                "168":"TP CP PICS/ricepaddy.jpg",
+                "169":"TP CP PICS/wheat2.jpg",
+                "170":"TP CP PICS/GROUNDNUTFARM1.jpg",
+                "171":"TP CP PICS/sesame2.jpg"           
+             
+      };
+
+      var h3Text = {
+        //"none": "",
+                   "12":"Rose",
+                   "20":"Jasmine",
+                   "25":"Marigold",
+                    "7":"Orchids",
+                   "10":"Lily",
+                  "51" :"Chrysanthemum  ",
+                  "69" :"Hibiscus  ",
+                  "8" :"Tulip  ",
+                  "55" :"Daffodils  ",
+                  "9" :"Iris  ",
+                  "30" :"Daisies  ",
+                  "31" :"Aster  ",
+                  "11" :"Gladiolus  ",
+                  "34" :"Petunia  ",
+                  "32" :"Zinnia  ",
+                  "33" :"Pansy  ",
+                  "35" :"Cosmos  ",
+                  "36" :"Dahlia  ",
+                  "37" :"Lily of the Valley  ",
+                  "38" :"Sweet Pea  ",
+                  "39" :"Hydrangea  ",
+                  "40" :"Bougainvillea  ",
+                  "41" :"Morning Glory  ",
+                  "42" :"Geranium  ",
+                  "43" :"Lavender  ",
+                  "44" :"Bluebell  ",
+                  "45" :"Camellia  ",
+                  "46" :"Azalea  ",
+                  "47" :"apple  ",
+                  "5" :"banana  ",
+                  "52" :"Berries  ",
+                  "53" :"CASHEW",
+                  "54" :"CHERRY  ",
+                  "57" :"COCONUT  ",
+                  "58" :"CUSTARD APPLE  ",
+                  "59" :"DATES  ",
+                  "61" :"GRAPES  ",
+                  "62" :"GUAVA  ",
+                  "63" :"JACKFRUIT  ",
+                  "64" :"JAVA PLUM  ",
+                  "66" :"Lychee  ",
+                  "67" :"Mango  ",
+                  "68" :"Mulberry  ",
+                  "70" :"Olive  ",
+                  "71" :"Papaya  ",
+                  "72" :"Passion Fruit  ",
+                  "73" :"Peach  ",
+                  "74" :"Persimmon  ",
+                  "75" :"Pineapple  ",
+                  "76" :"Plum  ",
+                  "77" :"Pomegranate  ",
+                  "78" :"Rambutan  ",
+                  "79" :"Sapota  ",
+                  "80" :"Star fruit  ",
+                  "81" :"Tamarind  ",
+                  "82" :"Watermelon  ",
+                  "83" :"Peper  ",
+                  "84" :"CARDOMON  ",
+                  "85" :"CINNAMON  ",
+                  "86" :"CLOVES  ",
+                  "87" :"CORIANDER  ",
+                  "88" :"CUMIN  ",
+                  "89" :"FENNEL  ",
+                  "90" :"FENNUGREEK  ",
+                  "91" :"GINGER  ",
+                  "92" :"NUTMEG  ",
+                  "93" :"TURMERIC  ",
+                  "94" :"STAR ANISE  ",
+                  "95" :"BAY LEAF  ",
+                  "96" :"CAROM SEEDS  ",
+                  "97" :"ASAFOETIDA  ",
+                  "98" :"MUSTARD SEEDS  ",
+                  "99" :"SAFFRON  ",
+                  "100" :"TAMARIND  ",
+                  "101" :"CURRY LEAVES  ",
+                  "102" :"MACE  ",
+                  "103" :"LONG PEPPER  ",
+                  "104" :"WHITE PEPPER  ",
+                  "105" :"CELERY SEEDS  ",
+                  "106" :"POPPY SEEDS  ",
+                  "107" :"AJWAIN SEEDS  ",
+                  "108" :"BLACK CUMIN  ",
+                  "109" :"DILL SEEDS  ",
+                  "110" :"ANISE SEEDS  ",
+                  "111" :"CAPER  ",
+                  "112" :"CUBEB PEPPER  ",
+                  "113" :"PARADISE SEEDS",
+                  "114" :"JUNIPER BERRY  ",
+                  "115" :"KOKUM  ",
+                  "116" :"BISHOP’S WEED  ",
+                  "117" :"GALANGAL  ",
+                  "50" :"Tomato  ",
+                  "18" :"Potato   ",
+                  "119":"pumpkin",
+                
+                 "120":"beetroot",
+                 "121":"cucumber",
+                 "122":"peas",
+                 "123":"radish",
+                 "124":"beans",
+                 "125":"sweet potato",
+                 "126":"drumstick1",
+                 "127":"bitter gourd",
+                 "128":"capsicum1",
+                 "129":"red chilli",
+                 "130":"green chilli",
+                 "131":"garlic",
+                 "132":"onion",
+                 "133":"carrot",
+                 "134":"cauliflower",
+                 "135":"cabbage",
+                 "136":"spinach",
+                 "137":"bottle gourd",
+                 "138":"ridge gourd",
+                 "139":"corn",
+                 "140":"broccoli",
+                 "141":"turnip1",
+                 "142":"Brinjal",
+                 "143":"ladies finger",
+
+
+                 /*"144":"yam3",
+                 "145":"colocasia3",
+                 "146":"chayote squash1",
+                 "147":"tindora1",
+                 "148":"cluster beans3",
+                 "149":"ash gourd3",
+                 "150":"snake gourd3"*/
+
+                 "144":"COTTON",
+                "145":"SUGARCANE",
+                "146":"TEA",
+                "147":"COFFEE",
+                "148":"TOBACCO",
+                "149":"JUTE",
+                "150":"RUBBER",
+                "151":"SUNFLOWER",
+                "152":"AERACANUT",
+                "153":"VANILLA",
+                "154":"KENAF",
+                "155":"FLAXSEEDS",
+                "156":"TAPIOCA",
+                "157":"COCOA",
+                "158":"BETEL LEAF",
+                "159":"GUAR",
+                "161":"ALOEVERA",
+                "162":"MUNGBEAN",
+                "163":"URADBEAN",
+                "164":"BENGALGRAM",
+                "165":"RAGI",
+                "166":"BAJRA",
+                "167":"BARLEY",
+                "168":"RICE",
+                "169":"WHEAT",
+                "170":"GROUNDNUT",
+                "171":"SESAME"
+
+
+        // Add h3 text for other options as needed
+      };
+
+      // Set the image source based on the selected value
+
+
+      image.src = imageUrls[selectedValue];
+      h3.textContent = h3Text[selectedValue];
+
+      if(selectedValue === "none") {
+        imgdiv.style.display = "none";
+        h3.style.display = "none";
+      } else {
+        imgdiv.style.display = "block";
+        h3.style.display = "block";
+      }
+
+    }
+      </script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+    /* Disable right-click
+    document.addEventListener('contextmenu', (event) => event.preventDefault());
+
+    // Disable keyboard shortcuts
+    document.addEventListener('keydown', (event) => {
+        // Disable F12
+        if (event.key === 'F12') {
+            event.preventDefault();
+        }
+        // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+Shift+C
+        if (event.ctrlKey && (event.shiftKey && ['I', 'J', 'C'].includes(event.key.toUpperCase())) || event.key === 'U') {
+            event.preventDefault();
+        }
+    });
+
+    // Detect if developer tools are open
+    let devtools = false;
+    const element = new Image();
+    Object.defineProperty(element, 'id', {
+        get: () => {
+            devtools = true;
+            alert("Developer tools are disabled!");
+        }
+    });
+    console.log(element);
+    setInterval(() => {
+        devtools = false;
+        console.log(element);
+        if (devtools) {
+            window.location.href = "about:blank"; // Redirect to blank page
+        }
+    }, 1000);*/
+</script>
+</body>
+</html>
+
+
+<!--form {
+            border: 1px solid green;
+            box-sizing: content-box;
+            margin: auto;
+            border-radius: 19px;
+            width: 400px;
+            padding: 32px 11px 5px;
+            background-color: orange;
+            box-shadow: 0 0 5px green,0 0 25px green;
+        }
+        form:hover{
+            box-shadow: 0 0 5px green,
+ 0 0 25px green,
+ 0 0 50px green,
+ 0 0 100px green,
+ 0 0 200px green;-->
