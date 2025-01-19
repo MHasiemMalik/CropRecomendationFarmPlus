@@ -1165,11 +1165,11 @@ else if(!Soil || Soil === "none") {
 
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt6.textContent = "Peas";
+    img4.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt4.textContent = "Peas";
 
    img5.src = "TP CP PICS/turmaric3.jpg"; // New image path
    txt5.textContent = "Turmeric";
@@ -1506,11 +1506,11 @@ else if(!Soil || Soil === "none") {
 
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/lentils.jpg"; // New image path
-    txt6.textContent = "Lentils";
+    img4.src = "TP CP PICS/lentils.jpg"; // New image path
+    txt4.textContent = "Lentils";
 
    img5.src = "TP CP PICS/turmaric3.jpg"; // New image path
    txt5.textContent = "Turmeric";
@@ -1848,11 +1848,11 @@ else if(!Soil || Soil === "none") {
 
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt6.textContent = "Peas";
+    img4.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt4.textContent = "Peas";
 
    img5.src = "TP CP PICS/sesame1.jpg"; // New image path
    txt5.textContent = "Sesame";
@@ -2522,11 +2522,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/Turmeric1.jpg"; // New image path
-    txt6.textContent = "Turmeric";
+    img4.src = "TP CP PICS/Turmeric1.jpg"; // New image path
+    txt4.textContent = "Turmeric";
  
    img5.src = "TP CP PICS/papaya.jpg"; // New image path
    txt5.textContent = "Papaya";
@@ -2860,11 +2860,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/carrot1.jpg"; // New image path
    txt5.textContent = "Carrot";
@@ -3198,11 +3198,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/barley2.jpg"; // New image path
-    txt6.textContent = "Barley";
+    img4.src = "TP CP PICS/barley2.jpg"; // New image path
+    txt4.textContent = "Barley";
  
    img5.src = "TP CP PICS/peas1.jpg"; // New image path
    txt5.textContent = "Peas";
@@ -3536,11 +3536,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/potato1.jpg"; // New image path
    txt5.textContent = "Potato";
@@ -3874,11 +3874,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/sorghum.jpg"; // New image path
-    txt6.textContent = "Sorghum";
+    img4.src = "TP CP PICS/sorghum.jpg"; // New image path
+    txt4.textContent = "Sorghum";
  
    img5.src = "TP CP PICS/AERACANUT.jpg"; // New image path
    txt5.textContent = "Arecanut";
@@ -4212,11 +4212,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/cucumber3.jpg"; // New image path
-    txt5.textContent = "Cucumber";
+    img3.src = "TP CP PICS/cucumber3.jpg"; // New image path
+    txt3.textContent = "Cucumber";
       
-    img6.src = "TP CP PICS/pumpkin3.jpg"; // New image path
-    txt6.textContent = "Pumpkin";
+    img4.src = "TP CP PICS/pumpkin3.jpg"; // New image path
+    txt4.textContent = "Pumpkin";
  
    img5.src = "TP CP PICS/longpepper.jpg"; // New image path
    txt5.textContent = "Pepper";
@@ -4550,11 +4550,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/Turmeric1.jpg"; // New image path
-    txt6.textContent = "Turmeric";
+    img4.src = "TP CP PICS/Turmeric1.jpg"; // New image path
+    txt4.textContent = "Turmeric";
  
    img5.src = "TP CP PICS/marigold1.jpg"; // New image path
    txt5.textContent = "Marigold";
@@ -4888,11 +4888,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/jowar.jpg"; // New image path
-    txt6.textContent = "Jowar";
+    img4.src = "TP CP PICS/jowar.jpg"; // New image path
+    txt4.textContent = "Jowar";
  
    img5.src = "TP CP PICS/onion3.jpg"; // New image path
    txt5.textContent = "Onion";
@@ -5226,11 +5226,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt5.textContent = "Mustard";
+    img3.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt3.textContent = "Mustard";
       
-    img6.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt6.textContent = "Pea";
+    img4.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt4.textContent = "Pea";
  
    img5.src = "TP CP PICS/potato3.jpg"; // New image path
    txt5.textContent = "Potato";
@@ -5564,11 +5564,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt5.textContent = "Mustard";
+    img3.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt3.textContent = "Mustard";
       
-    img6.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt6.textContent = "Pea";
+    img4.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt4.textContent = "Pea";
  
    img5.src = "TP CP PICS/potato3.jpg"; // New image path
    txt5.textContent = "Potato";
@@ -5903,11 +5903,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt5.textContent = "Mustard";
+    img3.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt3.textContent = "Mustard";
       
-    img6.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt6.textContent = "Pea";
+    img4.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt4.textContent = "Pea";
  
    img5.src = "TP CP PICS/orange.jpg"; // New image path
    txt5.textContent = "Orange";
@@ -6243,11 +6243,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt5.textContent = "Pea";
+    img3.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt3.textContent = "Pea";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/potato3.jpg"; // New image path
    txt5.textContent = "Potato";
@@ -6581,11 +6581,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/potato3.jpg"; // New image path
    txt5.textContent = "Potato";
@@ -6919,11 +6919,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/potato3.jpg"; // New image path
    txt5.textContent =  "Potato";
@@ -7257,11 +7257,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/barley2.jpg"; // New image path
    txt5.textContent = "Barley";
@@ -7595,11 +7595,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/barley2.jpg"; // New image path
-    txt5.textContent = "Barley";
+    img3.src = "TP CP PICS/barley2.jpg"; // New image path
+    txt3.textContent = "Barley";
       
-    img6.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt6.textContent = "Pea";
+    img4.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt4.textContent = "Pea";
  
    img5.src = "TP CP PICS/potato3.jpg"; // New image path
    txt5.textContent = "Potato";
@@ -7933,11 +7933,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/SUNFLOWER.jpg"; // New image path
-    txt6.textContent = "Sunflower";
+    img4.src = "TP CP PICS/SUNFLOWER.jpg"; // New image path
+    txt4.textContent = "Sunflower";
  
    img5.src = "TP CP PICS/chillis1.jpg"; // New image path
    txt5.textContent = "Chilli";
@@ -8271,11 +8271,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/maize.jpg"; // New image path
-    txt5.textContent = "Maize";
+    img3.src = "TP CP PICS/maize.jpg"; // New image path
+    txt3.textContent = "Maize";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
    txt5.textContent = "Groundnut";
@@ -8609,11 +8609,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt5.textContent = "Pea";
+    img3.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt3.textContent = "Pea";
       
-    img6.src = "TP CP PICS/potato3.jpg"; // New image path
-    txt6.textContent = "Potato";
+    img4.src = "TP CP PICS/potato3.jpg"; // New image path
+    txt4.textContent = "Potato";
  
    img5.src = "TP CP PICS/cauliflower1.jpg"; // New image path
    txt5.textContent = "Cauliflower";
@@ -8947,11 +8947,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/potato3.jpg"; // New image path
    txt5.textContent = "Potato";
@@ -9285,11 +9285,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/barley2.jpg"; // New image path
-    txt5.textContent = "Barley";
+    img3.src = "TP CP PICS/barley2.jpg"; // New image path
+    txt3.textContent = "Barley";
       
-    img6.src = "TP CP PICS/peas1.jpg"; // New image path
-    txt6.textContent = "Peas";
+    img4.src = "TP CP PICS/peas1.jpg"; // New image path
+    txt4.textContent = "Peas";
  
    img5.src = "TP CP PICS/potato3.jpg"; // New image path
    txt5.textContent = "Potato";
@@ -9624,11 +9624,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/wheat.jpg"; // New image path
-    txt5.textContent = "Wheat";
+    img3.src = "TP CP PICS/wheat.jpg"; // New image path
+    txt3.textContent = "Wheat";
       
-    img6.src = "TP CP PICS/mustard seeds.jpg"; // New image path
-    txt6.textContent = "Mustard";
+    img4.src = "TP CP PICS/mustard seeds.jpg"; // New image path
+    txt4.textContent = "Mustard";
  
    img5.src = "TP CP PICS/banana.jpg"; // New image path
    txt5.textContent = "Banana";
@@ -9962,11 +9962,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/barley2.jpg"; // New image path
-    txt5.textContent = "Barley";
+    img3.src = "TP CP PICS/barley2.jpg"; // New image path
+    txt3.textContent = "Barley";
       
-    img6.src = "TP CP PICS/peas3.jpg"; // New image path
-    txt6.textContent = "Peas";
+    img4.src = "TP CP PICS/peas3.jpg"; // New image path
+    txt4.textContent = "Peas";
  
    img5.src = "TP CP PICS/barley2.jpg"; // New image path
    txt5.textContent = "Barley";
@@ -10300,11 +10300,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/peas3.jpg"; // New image path
-    txt6.textContent = "Peas";
+    img4.src = "TP CP PICS/peas3.jpg"; // New image path
+    txt4.textContent = "Peas";
  
    img5.src = "TP CP PICS/marigold1.jpg"; // New image path
    txt5.textContent = "Marigold";
@@ -10638,11 +10638,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/Turmeric1.jpg"; // New image path
-    txt6.textContent = "Turmeric";
+    img4.src = "TP CP PICS/Turmeric1.jpg"; // New image path
+    txt4.textContent = "Turmeric";
  
    img5.src = "TP CP PICS/marigold1.jpg"; // New image path
    txt5.textContent = "Marigold";
@@ -10977,11 +10977,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/Turmeric1.jpg"; // New image path
-    txt6.textContent = "Turmeric";
+    img4.src = "TP CP PICS/Turmeric1.jpg"; // New image path
+    txt4.textContent = "Turmeric";
  
    img5.src = "TP CP PICS/marigold1.jpg"; // New image path
    txt5.textContent = "Marigold";
@@ -11316,11 +11316,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/Turmeric1.jpg"; // New image path
-    txt6.textContent = "Turmeric";
+    img4.src = "TP CP PICS/Turmeric1.jpg"; // New image path
+    txt4.textContent = "Turmeric";
  
    img5.src = "TP CP PICS/marigold1.jpg"; // New image path
    txt5.textContent = "Marigold";
@@ -11655,11 +11655,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/Turmeric1.jpg"; // New image path
-    txt6.textContent = "Turmeric";
+    img4.src = "TP CP PICS/Turmeric1.jpg"; // New image path
+    txt4.textContent = "Turmeric";
  
    img5.src = "TP CP PICS/marigold1.jpg"; // New image path
    txt5.textContent = "Marigold";
@@ -11994,11 +11994,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/Turmeric1.jpg"; // New image path
-    txt6.textContent = "Turmeric";
+    img4.src = "TP CP PICS/Turmeric1.jpg"; // New image path
+    txt4.textContent = "Turmeric";
  
    img5.src = "TP CP PICS/marigold1.jpg"; // New image path
    txt5.textContent = "Marigold";
@@ -12334,11 +12334,11 @@ else if(SD === "Gujarat"){
  
   }
   if(SS==107){
-    img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-    txt5.textContent = "Groundnut";
+    img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+    txt3.textContent = "Groundnut";
       
-    img6.src = "TP CP PICS/papaya.jpg"; // New image path
-    txt6.textContent = "Papaya";
+    img4.src = "TP CP PICS/papaya.jpg"; // New image path
+    txt4.textContent = "Papaya";
  
    img5.src = "TP CP PICS/marigold1.jpg"; // New image path
    txt5.textContent = "Marigold";
