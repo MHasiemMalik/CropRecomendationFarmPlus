@@ -1174,7 +1174,7 @@ else if(!Soil || Soil === "none") {
    img5.src = "TP CP PICS/turmaric3.jpg"; // New image path
    txt5.textContent = "Turmeric";
     
-   img6.src = "TP CP PICS/Banana.jpg"; // New image path
+   img6.src = "TP CP PICS/banana.jpg"; // New image path
    txt6.textContent = "Banana";
   }
   if(SS==161){
@@ -1515,7 +1515,7 @@ else if(!Soil || Soil === "none") {
    img5.src = "TP CP PICS/turmaric3.jpg"; // New image path
    txt5.textContent = "Turmeric";
     
-   img6.src = "TP CP PICS/Banana.jpg"; // New image path
+   img6.src = "TP CP PICS/banana.jpg"; // New image path
    txt6.textContent = "Banana";
   }
   if(SS==161){
