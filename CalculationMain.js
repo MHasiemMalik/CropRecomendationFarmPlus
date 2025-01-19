@@ -475,11 +475,11 @@ else if(!Soil || Soil === "none") {
 
     }
     if(SS==107){
-      img5.src = "TP CP PICS/groundnut2.jpg"; // New image path
-      txt5.textContent = "Groundnut";
+      img3.src = "TP CP PICS/groundnut2.jpg"; // New image path
+      txt3.textContent = "Groundnut";
         
-      img6.src = "TP CP PICS/Turmeric1.jpg"; // New image path
-      txt6.textContent = "Turmeric";
+      img4.src = "TP CP PICS/Turmeric1.jpg"; // New image path
+      txt4.textContent = "Turmeric";
 
      img5.src = "TP CP PICS/marigold1.jpg"; // New image path
      txt5.textContent = "Marigold";
@@ -821,11 +821,11 @@ else if(!Soil || Soil === "none") {
 
     }
     if(SS==107){
-      img5.src = "TP CP PICS/potato1.jpg"; // New image path
-      txt5.textContent = "Potato";
+      img3.src = "TP CP PICS/potato1.jpg"; // New image path
+      txt3.textContent = "Potato";
         
-      img6.src = "TP CP PICS/mustard seeds1.jpg"; // New image path
-      txt6.textContent = "Mustard";
+      img4.src = "TP CP PICS/mustard seeds1.jpg"; // New image path
+      txt4.textContent = "Mustard";
 
      img5.src = "TP CP PICS/kiwi.jpg"; // New image path
      txt5.textContent = "Kiwi";
