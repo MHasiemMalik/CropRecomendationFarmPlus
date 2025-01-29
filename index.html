@@ -7,6 +7,15 @@
     <title>Crop Recommendation+</title>
     <script src="https://kit.fontawesome.com/f25cce70b4.js" crossorigin="anonymous"></script> 
     <script src="CalculationMain.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PPZFYKYG97"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PPZFYKYG97');
+</script>
     <style>
         h2,h4,h3 {         
             color:white;
@@ -1167,39 +1176,40 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
-    /* Disable right-click
+    // Disable right-click
     document.addEventListener('contextmenu', (event) => event.preventDefault());
-
+  
     // Disable keyboard shortcuts
     document.addEventListener('keydown', (event) => {
-        // Disable F12
-        if (event.key === 'F12') {
-            event.preventDefault();
-        }
-        // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+Shift+C
-        if (event.ctrlKey && (event.shiftKey && ['I', 'J', 'C'].includes(event.key.toUpperCase())) || event.key === 'U') {
-            event.preventDefault();
-        }
+      // Disable F12
+      if (event.key === 'F12') {
+        event.preventDefault();
+      }
+      // Disable Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+Shift+C
+      if (event.ctrlKey && (event.shiftKey && ['I', 'J', 'C'].includes(event.key.toUpperCase())) || event.key === 'U') {
+        event.preventDefault();
+      }
     });
-
+  
     // Detect if developer tools are open
     let devtools = false;
     const element = new Image();
     Object.defineProperty(element, 'id', {
-        get: () => {
-            devtools = true;
-            alert("Developer tools are disabled!");
-        }
+      get: () => {
+        devtools = true;
+        alert("Developer tools are disabled!");
+      }
     });
     console.log(element);
     setInterval(() => {
-        devtools = false;
-        console.log(element);
-        if (devtools) {
-            window.location.href = "about:blank"; // Redirect to blank page
-        }
-    }, 1000);*/
-</script>
+      devtools = false;
+      console.log(element);
+      if (devtools) {
+        window.location.href = "about:blank"; // Redirect to blank page
+      }
+    }, 1000);
+  </script>
+
 </body>
 </html>
 
